@@ -58,3 +58,12 @@ FOREIGN KEY(id_insegnanti) REFERENCES insegnantii(matricola)
 );
 ALTER TABLE studenti ADD FOREIGN KEY(id_corsi_laurea) REFERENCES corsi_laurea(id);
 ALTER TABLE corsi_laurea  ADD FOREIGN KEY(id_dipartimento) REFERENCES dipartimento(id);
+-- Inserisco dati nel dipartimento
+INSERT INTO university.dipartimento
+(nome, indirizzo, direttore, numero_massimo_iscritti)
+VALUES('Dipartimento delle bustine', 'Casa di stefano', 'Stefanus', 20);
+INSERT INTO university.corsi_laurea
+(id, nome_corsi, crediti, id_dipartimento, numero_iscritti)
+VALUES(4791, 'Corso dei piedi', 12, 10, 20);
+
+
